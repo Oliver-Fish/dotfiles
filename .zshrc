@@ -67,8 +67,8 @@ antibody bundle < .dotfiles/antibody/bundles.txt
 ####
 
 #Source my Alises#
-source ".dotfiles/alias/general.zsh"
-source ".dotfiles/alias/golang.zsh"
+source "~/.dotfiles/alias/general.zsh"
+source "~/.dotfiles/alias/golang.zsh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
