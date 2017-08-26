@@ -36,10 +36,22 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-#Golang Exports
+#Golang
 export PATH=$PATH:/usr/local/go/bin
 export GOROOT=/usr/local/go
 export GOPATH=~/Projects/Go
+
+alias goc='go clean'
+alias gob='go build'
+alias gog='go get'
+alias goi='go install'
+alias gor='go run'
+####
+
+#NVM Imports
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ####
 
 #Powerline 
@@ -63,13 +75,15 @@ fi
 
 #Antibody start
 source <(antibody init)
-antibody bundle < .dotfiles/antibody/bundles.txt
+antibody bundle < ~/.dotfiles/antibody/bundles.txt
 ####
 
-#Source my Alises#
-source "~/.dotfiles/alias/general.zsh"
-source "~/.dotfiles/alias/golang.zsh"
+#General
+alias .="cd ../"
+alias ..="cd ../../"
+alias ...="cd ../../../"
+alias ....="cd ../../../../"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias l="ls -lah"
+alias cls="clear"
+####
