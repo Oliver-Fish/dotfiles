@@ -1,1 +1,2 @@
+Oliver-Fish/dotfiles
 zsh-users/zsh-syntax-highlighting
