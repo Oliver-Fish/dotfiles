@@ -41,7 +41,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #Golang
-export PATH=$PATH:/usr/local/go/bin
 export GOROOT=/usr/local/go
 export GOPATH=~/Projects/Go
 
@@ -98,4 +97,7 @@ alias ....="cd ../../../../"
 
 alias l="ls -lah"
 alias cls="clear"
+
+#This Should always be run last so we can use any defined env vars above
+export PATH=$PATH:$GOPATH/bin
 ####
