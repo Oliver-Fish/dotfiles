@@ -99,5 +99,5 @@ alias l="ls -lah"
 alias cls="clear"
 
 #This Should always be run last so we can use any defined env vars above
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ####
