@@ -168,4 +168,4 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # startup tools
-exec_always feh --bg-scale ~/.dotfiles/background.png
+exec_always --no-startup-id feh --bg-scale ~/.dotfiles/background.png
