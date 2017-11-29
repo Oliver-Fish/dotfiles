@@ -145,7 +145,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 new_window pixel 0
 
 # A 3 px border
-new_window pixel 3
+new_window pixel 1
 
 # Power Options
 bindsym $mod+Control+l exec "i3lock --fuzzy"	
@@ -168,4 +168,4 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # startup tools
-# exec libinput-gestures-setup start 
+exec_always feh --bg-scale ~/.dotfiles/background.png
