@@ -57,9 +57,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ####
 
-#Powerline 
+#Powerline Go
 function powerline_precmd() {
-    PS1="$(~/.powerline/powerline-go -error $? -shell zsh)"
+    PS1="$(powerline-go -error $? -shell zsh)"
 }
 
 function install_powerline_precmd() {
