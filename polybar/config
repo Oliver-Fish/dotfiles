@@ -45,16 +45,17 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = FontAwesome:pixelsize=8;2
-font-1 = IBM Plex Sans Text:pixelsize=10:antialias=true;2
+font-1 = IBM Plex Sans Text:pixelsize=18:antialias=true;2
 ;font-2 = DejaVu Sans:pixelsize=9:antialias=false;2
 ;font-3 = unifont:fontformat=truetype:size=10:antialias=false;2
 ;font-4 = siji:pixelsize=10;2
 
-modules-left = i3 
-; modules-center = 
-modules-right = pkg wlan volume date battery 
+modules-left = pkg wlan
+modules-center = i3 
+modules-right = volume date battery 
 tray-padding = 0
-
+;tray-maxsize = 16
+;dpi = 220
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -106,7 +107,7 @@ exec = ~/.config/polybar/pkg.sh
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp2s0 
 interval = 6.0
 
 format-connected-padding = 1
@@ -131,21 +132,16 @@ master-mixer = Master
 
 [module/date]
 type = internal/date
-interval = 5
-
-date = "%b %-d,"
-time = "%H:%M"
-date-alt = "%A, %B %-d, %Y (Week %W),"
-time-alt = "%H:%M (%Z %z)"
-
-label = %date% %time%
-label-padding = 2
-label-background = ${colors.col8}
-label-underline = ${colors.col6}
+interval = 1
+format-padding = 0
+date = %%{F#bb}%a %e %b%%{F-}
+time = %H:%M
+label = "%date%  %time%  "
+format = <label>
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = AC
 full-at = 98
 
