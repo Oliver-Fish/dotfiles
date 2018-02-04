@@ -98,7 +98,10 @@ alias ....="cd ../../../../"
 alias l="ls -lah"
 alias cls="clear"
 alias clipboard="xclip -selection clipboard"
+alias vim=nvim
+#export GDK_SCALE=2
 
 #This Should always be run last so we can use any defined env vars above
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ####
+source /usr/share/autojump/autojump.zsh
