@@ -99,6 +99,7 @@ alias l="ls -lah"
 alias cls="clear"
 alias clipboard="xclip -selection clipboard"
 alias vim=nvim
+alias wifi="sudo wifi-menu"
 #export GDK_SCALE=2
 
 #This Should always be run last so we can use any defined env vars above
