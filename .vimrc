@@ -44,7 +44,9 @@ noremap <S-ScrollWheelRight> <nop>
 noremap <C-ScrollWheelRight> <nop>
 
 " Rebind escape to JJ
-inoremap jj <ESC>
+inoremap jk <ESC>
+" Disable ESC in insert mode
+inoremap <esc> <nop>
 " Show line numbers
 set number
 " Nerdtree
