@@ -7,6 +7,7 @@ new_window pixel 3
 # App launchers
 bindsym $mod+Return exec xterm 
 bindsym $mod+d exec rofi -dpi -terminal xterm -show run 
+bindsym Mod1+Tab exec rofi -dpi -terminal xterm -show window 
 
 # Window Controls
 floating_modifier $mod 
