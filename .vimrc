@@ -2,22 +2,33 @@ call plug#begin()
 " General Plugin
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-" Auto-Complete
-Plug 'Valloric/YouCompleteMe'
+Plug 'bling/vim-airline'
+Plug 'elzr/vim-json'
+Plug 'Raimondi/delimitMate'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'ap/vim-buftabline'
 Plug 'SirVer/ultisnips'
-" Lanague Plugins
-Plug 'fatih/vim-go' 
-Plug 'Chiel92/vim-autoformat'
-Plug 'othree/html5.vim'
-Plug 'rstacruz/vim-hyperstyle'
-Plug 'hail2u/vim-css3-syntax'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim'
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+"Frontend Plugins
 Plug 'mattn/emmet-vim'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'maksimr/vim-jsbeautify' 
+"Go Plugins
+Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go'
 call plug#end()
 
 filetype plugin on
 colorscheme VisualStudioDark
 " Disable Arrow keys in Escape mode
-"
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -43,26 +54,49 @@ noremap <ScrollWheelRight>   <nop>
 noremap <S-ScrollWheelRight> <nop>
 noremap <C-ScrollWheelRight> <nop>
 
-" Rebind escape to JJ
+" Rebind escape to Jk
 inoremap jk <ESC>
 " Disable ESC in insert mode
 inoremap <esc> <nop>
 " Show line numbers
 set number
-" Nerdtree
+
+" Disable Swap File
+set noswapfile
+
+" Buffer Controls
+set hidden
+nnoremap <C-I> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+
+" Plugin Settings
+
+" NerdTree
+" Nerdtree toggle CTRL+N
 map <C-n> :NERDTreeToggle<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-" ultisnips
-let g:UltiSnipsSnippetsDir = $HOME."/.dotfiles/UltiSnips"
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', $HOME.'/.dotfiles/UltiSnips']
-let g:UltiSnipsExpandTrigger = '<C-j>'
-let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
-let g:UltiSnipsEnableSnipMate = 0
-autocmd BufEnter,BufNew *.tmpl setf tmpl.html
-let g:user_emmet_leader_key='<c-b>'
-au BufWrite * :Autoformat
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
+
+"emmet-vim settings
+"Only allow emmet-vim on html and css files
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+"Set emmet key to ctrl+x
+let g:user_emmet_leader_key='<C-X>'
+
+"js-beautify settings
+" for javascript
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+"deoplete settings
+"Enable at startup
+let g:deoplete#enable_at_startup = 1
+"Remap keys to CTRL + J and CTRL + K
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+"Disable Preview Window popup
+set completeopt-=preview
