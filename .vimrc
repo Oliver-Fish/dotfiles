@@ -66,8 +66,8 @@ set noswapfile
 
 " Buffer Controls
 set hidden
-nnoremap <C-I> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
+nnoremap <C-P> :bnext<CR>
+nnoremap <C-I> :bprev<CR>
 
 " Plugin Settings
 
