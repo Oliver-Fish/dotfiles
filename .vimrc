@@ -21,6 +21,7 @@ Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'maksimr/vim-jsbeautify' 
+Plug 'ap/vim-css-color'
 "Go Plugins
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go'
