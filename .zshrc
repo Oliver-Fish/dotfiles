@@ -44,11 +44,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export GOROOT=/usr/local/go
 export GOPATH=~/Projects/Go
 
-alias goc='go clean'
-alias gob='go build'
-alias gog='go get'
-alias goi='go install'
-alias gor='go run'
+#alias goc='go clean'
+#alias gob='go build'
+#alias gog='go get'
+#alias goi='go install'
+#alias gor='go run'
 ####
 
 #NVM Imports
@@ -82,24 +82,25 @@ antibody bundle < ~/.dotfiles/antibody/bundles.txt
 ####
 
 #Tmux
-alias ta='tmux attach -t'
-alias tad='tmux attach -d -t'
-alias ts='tmux new-session -s'
-alias tl='tmux list-sessions'
-alias tksv='tmux kill-server'
-alias tkss='tmux kill-session -t'
+#alias ta='tmux attach -t'
+#alias tad='tmux attach -d -t'
+#alias ts='tmux new-session -s'
+#alias tl='tmux list-sessions'
+#alias tksv='tmux kill-server'
+#alias tkss='tmux kill-session -t'
 
 #General
-alias .="cd ../"
-alias ..="cd ../../"
-alias ...="cd ../../../"
-alias ....="cd ../../../../"
+#alias .="cd ../"
+#alias ..="cd ../../"
+#alias ...="cd ../../../"
+#alias ....="cd ../../../../"
 
-alias l="ls -lah"
-alias cls="clear"
-alias clipboard="xclip -selection clipboard"
-alias vim=nvim
-alias wifi="sudo wifi-menu"
+#alias l="ls -lah"
+#alias cls="clear"
+#alias clipboard="xclip -selection clipboard"
+#alias vim=nvim
+#alias wifi="sudo wifi-menu"
+#alias term="nohup xterm > /dev/null &"
 #export GDK_SCALE=2
 
 #This Should always be run last so we can use any defined env vars above
