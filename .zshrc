@@ -2,12 +2,12 @@
 
 autoload -Uz promptinit
 promptinit
-prompt adam1
+prompt suse 
 
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+#bindkey -e
 
 # Key bindings fix
 bindkey "^[[1;5C" forward-word
@@ -44,13 +44,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export GOROOT=/usr/local/go
 export GOPATH=~/Projects/Go
 
-#alias goc='go clean'
-#alias gob='go build'
-#alias gog='go get'
-#alias goi='go install'
-#alias gor='go run'
-####
-
 #NVM Imports
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -59,7 +52,7 @@ export NVM_DIR="$HOME/.nvm"
 
 #Powerline Go
 function powerline_precmd() {
-    PS1="$(powerline-go -error $? -shell zsh)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh)"
 }
 
 function install_powerline_precmd() {
@@ -75,33 +68,15 @@ if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
 ####
+alias .="cd ../"
+alias ..="cd ../../"
+alias ...="cd ../../../"
+alias ....="cd ../../../../"
 
 #Antibody start
 source <(antibody init)
 antibody bundle < ~/.dotfiles/antibody/bundles.txt
 ####
-
-#Tmux
-#alias ta='tmux attach -t'
-#alias tad='tmux attach -d -t'
-#alias ts='tmux new-session -s'
-#alias tl='tmux list-sessions'
-#alias tksv='tmux kill-server'
-#alias tkss='tmux kill-session -t'
-
-#General
-#alias .="cd ../"
-#alias ..="cd ../../"
-#alias ...="cd ../../../"
-#alias ....="cd ../../../../"
-
-#alias l="ls -lah"
-#alias cls="clear"
-#alias clipboard="xclip -selection clipboard"
-#alias vim=nvim
-#alias wifi="sudo wifi-menu"
-#alias term="nohup xterm > /dev/null &"
-#export GDK_SCALE=2
 
 #This Should always be run last so we can use any defined env vars above
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
