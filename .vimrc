@@ -20,8 +20,10 @@ endif
 Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'maksimr/vim-jsbeautify' 
 Plug 'ap/vim-css-color'
+Plug 'pangloss/vim-javascript'
 "Go Plugins
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go'
@@ -92,6 +94,7 @@ autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 "deoplete settings
 "Enable at startup
