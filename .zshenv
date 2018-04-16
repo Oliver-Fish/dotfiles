@@ -18,3 +18,4 @@ alias clipboard="xclip -selection clipboard"
 alias vim=nvim
 alias wifi="sudo wifi-menu"
 alias term="nohup xterm > /dev/null &"
+alias videostream="google-chrome-stable --app-id=cnciopoikihiagdjbjpnocolokfelagl &> /dev/null"
