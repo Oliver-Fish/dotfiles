@@ -74,6 +74,9 @@ nnoremap <C-I> :bprev<CR>
 
 " Plugin Settings
 
+" Vim-Go settings
+autocmd BufNewFile,BufRead *.gohtml set filetype=html
+autocmd FileType go noremap <buffer> <c-f> :GoFmt<cr>
 " NerdTree
 " Nerdtree toggle CTRL+N
 map <C-n> :NERDTreeToggle<CR>
