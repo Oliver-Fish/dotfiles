@@ -27,6 +27,8 @@ Plug 'pangloss/vim-javascript'
 "Go Plugins
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go'
+"Management
+Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 
 filetype plugin on
