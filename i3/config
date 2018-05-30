@@ -1,8 +1,8 @@
 set $mod Mod4 
 
 # Visual Settings
-font pango:DejaVu Sans Mono 8
-new_window pixel 3
+font pango:DejaVu Sans Mono 12 
+new_window pixel 5
 
 # App launchers
 bindsym $mod+Return exec xterm 

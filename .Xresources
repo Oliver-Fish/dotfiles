@@ -5,7 +5,6 @@ XTerm.vt100.faceName:Source Code Pro for Powerline:size=10:antialias=true
 xterm*VT100.Translations: #override \
                  Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
                  Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
-
 ! special
 *.foreground:   #c0c5ce
 *.background:   #2b303b
@@ -55,7 +54,7 @@ rofi.color-window: #2b303b, #000000, #000000
 rofi.color-normal: #2b303b, #839496, #2b303b, #8fa1b3, #2b303b
 rofi.color-active: #8fa1b3, #2b303b
 rofi.color-urgent: #dd002b36, #d33682, #00002b36, #dd073642, #d33682
-
+!rofi.ssh-command: xterm -e "{ssh-client} {host}"
 rofi.yoffset: 0
 rofi.fake-transparency: true 
 rofi.location: 0
@@ -63,3 +62,5 @@ rofi.width: 50
 rofi.font: sourcecodepro 10 
 rofi.lines: 15
 rofi.fixed-num-lines: true
+
+Xft.dpi: 180
