@@ -19,3 +19,4 @@ alias vim=nvim
 alias wifi="sudo wifi-menu"
 alias term="nohup xterm > /dev/null &"
 alias videostream="google-chrome-stable --app-id=cnciopoikihiagdjbjpnocolokfelagl &> /dev/null"
+alias spotify="nohup spotify --force-device-scale-factor=2 > /dev/null & disown"
