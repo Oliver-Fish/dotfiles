@@ -4,6 +4,7 @@ alias gob='go build'
 alias gog='go get'
 alias goi='go install'
 alias gor='go run'
+alias gota='go test ./...'
 #Tmux
 alias ta='tmux attach -t'
 alias tad='tmux attach -d -t'
