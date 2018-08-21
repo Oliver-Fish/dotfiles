@@ -1,0 +1,16 @@
+priority -50
+
+# init ()
+snippet init "func init { ... }"
+func init() {
+	${0:${VISUAL}}
+}
+endsnippet
+
+# funch (w http.ResponseWriter, req *http.Request)
+snippet funch "func ... (w http.ResponseWriter, req *http.Request) { ... }"
+func ${1:funcName} (w http.ResponseWriter, req *http.Request) {
+	${2}
+}
+${0}
+endsnippet
