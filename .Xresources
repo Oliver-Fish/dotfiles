@@ -64,3 +64,4 @@ rofi.lines: 15
 rofi.fixed-num-lines: true
 
 Xft.dpi: 180
+Xcursor.size: 30
