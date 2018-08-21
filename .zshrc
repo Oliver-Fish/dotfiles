@@ -43,6 +43,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #Golang
 export GOROOT=/usr/local/go
 export GOPATH=~/Projects/Go
+export GOBIN=$GOPATH/bin
 
 #NVM Imports
 export NVM_DIR="$HOME/.nvm"
