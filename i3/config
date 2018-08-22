@@ -95,3 +95,4 @@ bindsym XF86AudioPrev exec playerctl previous
 # startup tools
 exec_always --no-startup-id feh --bg-scale ~/.dotfiles/i3/background.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id python ~/.dotfiles/i3/scripts/pulse-volume-watcher.py | xob
