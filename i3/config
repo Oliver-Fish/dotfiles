@@ -76,7 +76,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # Power Options
-bindsym $mod+Control+Shift+l exec "i3lock"	
+bindsym Control+l exec "i3lock"	
 bindsym $mod+Control+Shift+s exec "shutdown now"	
 bindsym $mod+Control+Shift+r exec "reboot"	
 # Pulse Audio controls
