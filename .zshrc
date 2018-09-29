@@ -53,7 +53,7 @@ export NVM_DIR="$HOME/.nvm"
 
 #Powerline Go
 function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-max-depth 1)"
 }
 
 function install_powerline_precmd() {
