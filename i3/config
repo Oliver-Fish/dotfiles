@@ -97,3 +97,10 @@ exec_always --no-startup-id feh --bg-scale ~/.dotfiles/i3/background.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id python ~/.dotfiles/i3/scripts/pulse-volume-watcher.py | xob
 exec_always --no-startup-id touch /tmp/blight && tail -f /tmp/blight | xob
+
+# popup term
+exec_always --no-startup-id i3-msg [instance="metask"] kill # Kill any running terminals this allows a refresh
+exec_always --no-startup-id xterm -name metask 
+for_window [instance="metask"] floating enable;
+for_window [instance="metask"] move scratchpad; [instance="metask"] scratchpad show; move position 0px 50px;resize set 100ppt 800px; move scratchpad
+bindsym $mod+Tab [instance="metask"] scratchpad show
