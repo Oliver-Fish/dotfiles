@@ -4,6 +4,7 @@
 ln -sf ~/.dotfiles/.zshrc ~/.zshrc
 ln -sf ~/.dotfiles/.zshenv ~/.zshenv
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc
+ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/.Xresources ~/.Xresources 
 ln -sf ~/.dotfiles/.config/dunstrc ~/.config/dunstrc 
 ln -s ~/.dotfiles/i3 ~/.config/i3
