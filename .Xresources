@@ -63,5 +63,5 @@ rofi.font: sourcecodepro 10
 rofi.lines: 15
 rofi.fixed-num-lines: true
 
-Xft.dpi: 180
+Xft.dpi: 130
 Xcursor.size: 30
