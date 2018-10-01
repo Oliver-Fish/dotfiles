@@ -1,5 +1,6 @@
 call plug#begin()
 " General Plugin
+Plug 'dsclementsen/vim-visualstudiodark'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-airline'
@@ -32,7 +33,6 @@ Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 
 filetype plugin on
-colorscheme VisualStudioDark
 " Disable Arrow keys in Escape mode
 map <up> <nop>
 map <down> <nop>
