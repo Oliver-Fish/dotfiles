@@ -8,6 +8,10 @@ setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
 #bindkey -e
+#
+
+# Enable bash style comments
+setopt interactivecomments
 
 # Key bindings fix
 bindkey "^[[1;5C" forward-word
