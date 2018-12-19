@@ -4,6 +4,9 @@ autoload -Uz promptinit
 promptinit
 prompt suse 
 
+
+export TERM=xterm-256color #Fixes ZSH-Autocomplete highlight style
+
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
